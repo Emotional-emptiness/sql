@@ -1,0 +1,5 @@
+SELECT p.NAME, p.START_DATE, p.FINISH_DATE
+FROM project p
+JOIN project_worker pw ON p.ID = pw.PROJECT_ID
+JOIN worker w ON pw.WORKER_ID = w.ID
+GROUP BY p.NAME, p.START_DATE, p.FINISH_DATE;
